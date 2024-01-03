@@ -1,5 +1,7 @@
 <p style="color: green"><%= notice %></p>
+<p style="color: red"><%= alert %></p>
 
+<h2>Customer's information</h2>
 <%= render @customer %>
 
 <div>
@@ -10,6 +12,7 @@
 </div>
 
 <% if @customer.orders.present? %>
+  <h2>Customer's orders</h2>
   <table>
     <thead>
     <tr>
