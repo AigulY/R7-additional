@@ -63,7 +63,7 @@ RSpec.describe "Orders", type: :request do
   describe "PUT /orders/[order] with valid data" do
     it "updates an entry and redirects to the show path for the order" do
       order = FactoryBot.create(:order)
-      put "/orders/#{order.id}", params: {order: {product_count: 50}}
+      put order_path(order.id), params: {order: {product_count: 50}}
       order.reload
       expect(order.product_count).to eq(50)
       expect(response).to redirect_to("/orders/#{order.id}")

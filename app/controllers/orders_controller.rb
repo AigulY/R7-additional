@@ -20,7 +20,7 @@ class OrdersController < ApplicationController
     def create
         @order = Order.new(order_params)
         if @order.save
-          flash.notice = "The corder was created successfully."
+          flash.notice = "The order was created successfully."
           redirect_to @order
         else
           render :new, status: :unprocessable_entity
