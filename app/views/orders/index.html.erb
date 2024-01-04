@@ -2,7 +2,7 @@
 
 <div id="orders" class="container-fluid row">
   <% @orders.each do |order| %>
-    <div class="col-sm-2">
+    <div class="col-sm-4 col-md-3 col-lg-2">
       <div class="card border border-2 border-success p-1 mt-3">
         <div class="card-header text-center">
           <strong><%= order.product_name.capitalize %></strong>
@@ -10,10 +10,10 @@
         <div class="card-body">
           <%= order.customer.full_name %> is buying <%= order.product_count %>
         </div>
-        <div class="card-footer d-flex justify-content-between">
-          <%= link_to 'Edit', edit_order_path(order), class: "btn btn-outline-primary mx-1" %>
-          <%= link_to 'Show', order, class: "btn btn-outline-primary mx-1" %>
-          <%= button_to 'Delete', order, method: :delete, data: { turbo_confirm: "Please confirm the deletion"}, class: "btn btn-outline-danger mx-1" %>
+        <div class="card-footer d-flex justify-content-around">
+          <%= link_to 'Edit', edit_order_path(order), class: "btn btn-outline-primary btn-sm" %>
+          <%= link_to 'Show', order, class: "btn btn-outline-primary btn-sm" %>
+          <%= button_to 'Delete', order, method: :delete, data: { turbo_confirm: "Please confirm the deletion"}, class: "btn btn-outline-danger btn-sm" %>
         </div>
       </div>
     </div>
