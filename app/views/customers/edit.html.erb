@@ -2,9 +2,7 @@
 
 <%= render "form", customer: @customer %>
 
-<br>
-
-<div>
-  <%= link_to "Show this customer", @customer %> |
-  <%= link_to "Back to customers", customers_path %>
+<div class="mt-2">
+  <%= link_to "Show this customer", @customer, class: "btn btn-outline-primary mx-1" %> |
+  <%= link_to "Back to customers", customers_path, class: "btn btn-outline-primary mx-1" %>
 </div>

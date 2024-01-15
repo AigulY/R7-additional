@@ -1,14 +1,27 @@
-<p style="color: green"><%= notice %></p>
-
 <h1>Customers</h1>
 
-<div id="customers">
-  <% @customers.each do |customer| %>
-    <%= render customer %>
-    <p>
-      <%= link_to "Show this customer", customer %>
-    </p>
-  <% end %>
+<div class="container mx-3">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Number of Orders</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @customers.each do |customer| %>
+        <tr>
+          <td><%= icon('fa-regular', 'user') %></td>
+          <td><%= customer.first_name %> <%= customer.last_name %></td>
+          <td><%= customer.orders.count %></td>
+          <td>
+            <%= link_to "Show this customer", customer, class: "btn btn-outline-primary mx-1" %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>
 
-<%= link_to "New customer", new_customer_path %>
+<%= link_to "New customer", new_customer_path, class: "btn btn-primary mx-1" %>

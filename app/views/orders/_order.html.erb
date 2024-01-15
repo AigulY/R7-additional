@@ -1,15 +1,18 @@
 <div id="<%= dom_id order %>">
   <p>
+    <%= icon('fa-solid', 'shopping-cart') %>
     <strong>Product name:</strong>
     <%= order.product_name %>
   </p>
 
   <p>
+    <%= icon('fa-solid', 'calculator') %>
     <strong>Product count:</strong>
     <%= order.product_count %>
   </p>
 
   <p>
+    <%= icon('fa-regular', 'user') %>
     <strong>Customer name:</strong>
     <%= order.customer.full_name %>
   </p>

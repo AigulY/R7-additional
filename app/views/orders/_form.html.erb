@@ -27,7 +27,7 @@
     <%= form.collection_select :customer_id, Customer.all, :id, :full_name, include_blank: true %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="mt-2 mx-1">
+    <%= form.submit class: "btn btn-primary" %>
   </div>
 <% end %>
